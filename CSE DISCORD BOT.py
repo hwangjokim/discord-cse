@@ -79,7 +79,7 @@ async def 회원가입(ctx):
                 print("")
                 Signup(member.name, member.id)
                 print("회원가입이 완료되었습니다.")
-                print("---------------------------ㅌ---\n")
+                print("------------------------------\n")
                 await ctx.send(f'{member.name}님의 가입이 완료되었습니다.')
 
 @commands.has_role("학생회")
