@@ -151,7 +151,7 @@ async def shuffle(ctx):   #box = 추첨을 위해 미리 만들어둔 리스트
 @client.command(name='추첨')
 async def raffle(ctx):
     if box: 
-        await ctx.send(f'당첨자 : {box[0]} (보유 추첨권 : {box.count(box[0])}') #0번째 인덱스를 당첨자로 선택
+        await ctx.send(f'당첨자 : {box[0]} (보유 추첨권 : {box.count(box[0])})') #0번째 인덱스를 당첨자로 선택
         temp=box[0]
         #print(temp)
         while temp in box:  
