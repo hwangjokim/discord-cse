@@ -20,6 +20,8 @@ client = commands.Bot(command_prefix=prefix,intents=intents, case_insensitive=Tr
 @client.event
 async def on_ready():
     print("Ready")
+    chel = client.get_channel(945185979050889269)
+    await chel.send('4일간 진행된 새내기배움터 행사에 참여해주셔서 감사합니다.')
     await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name="여러분의 의견을 "))
     for guild in client.guilds:
         for channel in guild.voice_channels:
@@ -152,6 +154,7 @@ async def shuffle(ctx):   #box = 추첨을 위해 미리 만들어둔 리스트
 async def raffle(ctx):
     if box: 
         await ctx.send(f'당첨자 : {box[0]} (보유 추첨권 : {box.count(box[0])})') #0번째 인덱스를 당첨자로 선택
+        print(box)
         temp=box[0]
         #print(temp)
         while temp in box:  
